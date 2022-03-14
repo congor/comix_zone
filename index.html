@@ -1,0 +1,804 @@
+<head>
+	<style>
+		body {
+			margin: 0 0;
+			font-size: 1.5em;
+			background-color: black;
+			color: white;
+		}
+
+		#counter-container::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		#counter {
+			font-family: Time New Roman;
+			font-size: 0.75em;
+		}
+
+		#current_step {
+			text-align: right;
+			font-family: inherit;
+			font-size: inherit;
+			background-color: inherit;
+			color: inherit;
+			border-color: transparent;
+		}
+
+		#current_step:focus {
+			background-color: rgba(256, 256, 256, 0.5);	
+		}
+
+		#counter-container {
+			text-align: center;
+		}
+
+		.counter-element {
+			display: inline-block;
+		}
+
+		.player-element {
+			float: left;
+		}
+
+		.side-button {
+			width: 10%;
+			height: 100%;
+		}
+
+		#viewport {
+			width: 80%;	
+		}
+
+		#picture {
+			width: 100%;
+			cursor: pointer;
+		}
+
+		.button {
+			cursor: pointer;
+		}
+
+		.side-button {
+			background-color: black;			
+		}
+
+		#voice-one-word, .side-button:hover {
+			background-color: rgba(256, 256, 256, 0.3);			
+		}
+
+		.side-button:active {
+			background-color: rgba(256, 256, 256, 0.8);
+		}
+
+		#text {
+			margin: 10px 0;
+			text-align: center;
+		}
+
+		.word::after {
+			content: ' ';
+		}
+
+		.stressed {
+			background-color: lightgreen;
+			color: black;
+		}
+
+		select, option {
+			text-transform: uppercase;
+			text-align-last: center;
+			background-color: inherit;
+			color: inherit;
+		}
+
+		option {
+			background-color: black;
+		}
+
+		option:checked {
+			background: crimson;
+		}
+
+		.droplist {
+			width: 100%;
+		}
+
+		.voice-element {
+			display: inline-block;
+		}
+
+		#voice-container {
+			text-align: center;
+		}
+
+		#voice-one-word {
+			text-align: center;
+			border-radius: 10px;
+			padding: 5px 0;
+			font-size: 1em;
+			width: 100%;
+			min-width: 5em;
+			margin: 10px auto;
+			opacity: 0.5;
+		}
+
+		#voice-one-word.one-word-mode-activated, #voice-one-word:hover {
+			background-color: crimson;			
+		}
+
+		#voice-one-word.one-word-mode-activated, #voice-one-word:active {
+			opacity: 1;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+</head>
+<body>
+	<div id="player">
+		<div id="previous" class="player-element button side-button"></div>
+		<div id="viewport" class="player-element">
+			<div id="counter-container">
+				<div id="counter">
+					<input id="current_step" type="number" class="counter-element" min=0>
+					<div class="counter-element">/</div>
+					<div id="total_steps" class="counter-element"></div>
+				</div>
+			</div>
+			<div id="picture-container">
+				<img id="picture" class="button">
+			</div>
+			<div id="text-container">
+				<div id="text"></div>
+				<div id="text-switch">
+					<select id="select-text-mode" title="Language / Язык" class="droplist">
+					</select>
+					<div id="select-voice-container">
+						<select id="select-voice" title="Voice / Голос" class="droplist">
+						</select>
+					</div>
+				</div>
+				<div id="voice-container">
+					<div id="voice-volume-container" class="voice-element">
+						<select id="voice-volume" title="Volume / Громкость">
+							<option value=1 selected>100%</option>
+							<option value=0.9>90%</option>
+							<option value=0.8>80%</option>
+							<option value=0.7>70%</option>
+							<option value=0.6>60%</option>
+							<option value=0.5>50%</option>
+							<option value=0.4>40%</option>
+							<option value=0.3>30%</option>
+							<option value=0.2>20%</option>
+							<option value=0.1>10%</option>
+							<option value=0>MUTE</option>
+						</select>
+					</div>
+					<div id="voice-rate-container" class="voice-element" >
+						<select id="voice-rate" title="Speed / Скорость">
+							<option value=2>2x</option>
+							<option value=1.75>1.75x</option>
+							<option value=1.5>1.5x</option>
+							<option value=1.25>1.25x</option>
+							<option value=1 selected>1x</option>
+							<option value=0.75>0.75x</option>
+							<option value=0.5>0.5x</option>
+							<option value=0.25>0.25x</option>
+						</select>
+					</div>
+					<div id="voice-pitch-container" class="voice-element">
+						<select id="voice-pitch" title="Pitch / Тон подачи">
+							<option value=2.0>2.0</option>
+							<option value=1.9>1.9</option>
+							<option value=1.8>1.8</option>
+							<option value=1.7>1.7</option>
+							<option value=1.6>1.6</option>
+							<option value=1.5>1.5</option>
+							<option value=1.4>1.4</option>
+							<option value=1.3>1.3</option>
+							<option value=1.2>1.2</option>
+							<option value=1.1>1.1</option>
+							<option value=1 selected="">1</option>
+							<option value=0.9>0.9</option>
+							<option value=0.8>0.8</option>
+							<option value=0.7>0.7</option>
+							<option value=0.6>0.6</option>
+							<option value=0.5>0.5</option>
+							<option value=0.4>0.4</option>
+							<option value=0.3>0.3</option>
+							<option value=0.2>0.2</option>
+							<option value=0.1>0.1</option>
+						</select>
+					</div>
+				</div>
+				<div id="voice-one-word" class="button">SAY ONE WORD</div>
+			</div>
+		</div>
+		<div id="next" class="player-element button side-button"></div>
+	</div>
+	<script>
+		window.onload = downloadJson('source.json', dowloadSourceCallback);
+		window.synth = window.speechSynthesis;
+		window.onselectstart = function() {return false};
+		// console.log(window.location)
+
+		Player = function(source) {
+
+			this.cleanNodeContent = function(parentNode) {
+				while (parentNode.firstChild) {
+					parentNode.removeChild(parentNode.firstChild);
+				};
+			};
+
+			this.populateVoiceListDecorator = function() {
+				window.player.populateVoiceList();
+			};
+
+			this.createVoiceOptionElement = function(optionsFragment, number, selected) {
+				var voice = this.voicesForCurrentLanguage[number];
+				voice.number = number;
+				var option = document.createElement('option');
+				option.textContent = voice.name + ' (' + voice.lang + ')';
+				option.setAttribute('data-lang', voice.lang);
+				option.setAttribute('data-name', voice.name);
+				option.setAttribute('value', number);
+				if (selected) {
+					option.selected = true;
+				};
+				optionsFragment.appendChild(option);
+			};
+
+			this.populateVoiceList = function() {
+
+				if (this.voiceSelectElement.children.length != 0) {
+					this.cleanNodeContent(this.voiceSelectElement);
+				};
+				// console.log(this.voices);
+				this.voicesForCurrentLanguage = [];
+				for (i=0; i<this.voices.length; i++) {
+					if (this.voices[i].lang.includes(this.currentText.language)) {
+						this.voicesForCurrentLanguage.push(this.voices[i]);
+					};
+				};
+				// console.log(this.voicesForCurrentLanguage);
+				var optionsFragment = document.createDocumentFragment();
+				if (this.voicesForCurrentLanguage.length == 0) {
+					// alert('NO VOICES');
+					this.voice = null;
+				} else if (this.voicesForCurrentLanguage.length == 1) {
+					this.voice = this.voicesForCurrentLanguage[0];
+					// console.log(this.voice)
+					this.createVoiceOptionElement(optionsFragment, 0, true);
+				} else {
+					for (var i=0;i<this.voicesForCurrentLanguage.length;i++) {
+						var selected = false;
+						if (this.currentText.language == 'en' && this.voicesForCurrentLanguage[i].name == 'Google UK English Male' || this.currentText.language == 'ru' && this.voicesForCurrentLanguage[i].name == 'Google русский') {
+							var selected = true;
+							this.voice = this.voicesForCurrentLanguage[i];
+							this.voice.number = i;
+						};
+						this.createVoiceOptionElement(optionsFragment, i, selected);
+					};
+				};
+				this.voiceSelectElement.appendChild(optionsFragment);
+			};
+
+			this.createUtterance = function() {
+				this.utterance = new SpeechSynthesisUtterance();
+				// this.utterance.voice = this.voice;
+				this.changeVoiceVolume(1);
+				this.changeVoiceRate(1);
+				this.changeVoicePitch(1);				
+			};
+
+			this.defineTextModes = function() {
+				textModes = {};
+				for (var i=0;i<this.source[0].text.length;i++) {
+					textModes[i] = this.source[0].text[i];
+				};
+				return textModes;
+			};
+
+			this.defineTextModesForStep = function() {
+				textModes = {};
+				for (var i=0;i<this.source[this.currentStringNumber].text.length;i++) {
+					textModes[i] = this.source[this.currentStringNumber].text[i];
+				};				
+				return textModes;
+			};
+
+			this.makeStepDecorator = function(event) {
+				window.player.makeStep(event.target.id);
+			};
+
+			this.makeStep = function(direction) {
+				switch (direction) {
+					case this.previousButtonElement.id:
+						if (this.currentStringNumber > 0) {
+							this.currentStringNumber--;
+						} else {
+							this.currentStringNumber = this.stepsTotal-1;
+						};
+					break;
+					case this.nextButtonElement.id:
+						if (this.currentStringNumber < this.stepsTotal-1) {
+							this.currentStringNumber++;
+						} else {
+							this.currentStringNumber = 0;
+						};
+					break;
+				};
+				this.stopVoice();
+				this.completePlayer();
+			};
+
+			// this.playVoiceDecorator = function() {
+			// 	window.player.playAllText();
+			// };
+
+			this.playAllText = function() {
+				// this.stopVoice();
+				// this.utterance.text = this.currentText.text;
+				// this.utterance.voice = this.voice;
+				// this.utterance.lang = this.languagesForSpeach[this.currentText.language];
+				// window.synth.speak(this.utterance);
+				this.playVoice(this.currentText.text);
+				// console.log('PLAY')
+				// console.log(window.synth.speaking);
+				// console.log(this.voicePaused);
+			};
+
+			this.playVoice = function(text) {
+				this.utterance.voice = this.voice;
+				if (!this.voice) {
+					// this.utterance.voice = null;
+					this.utterance.lang = this.languagesForSpeach[this.currentText.language];
+				};
+				// console.log(this.languagesForSpeach)
+				this.utterance.text = text;
+				this.stopVoice();
+				window.synth.speak(this.utterance);
+			};
+
+			this.stopVoice = function() {
+				window.synth.cancel();
+			};
+
+			this.pauseOrResumeVoiceDecorator = function() {
+				window.player.pauseOrResumeVoice();
+			};
+
+			this.pauseOrResumeVoice = function() {
+				// console.log('----------')
+				// console.log(window.synth.speaking)
+				// console.log(this.voicePaused)
+				if (!window.synth.speaking && !this.voicePause) {
+					this.playAllText();
+				} else if (window.synth.speaking && !this.voicePaused) {
+					this.pauseVoice();
+				} else {
+					this.resumeVoice();
+				};
+				// console.log(window.synth.speaking)
+				// console.log(this.voicePaused)
+			};
+
+			this.pauseVoice = function() {
+				this.voicePaused = true;
+				window.synth.pause();
+				// this.changeVoiceTitleButton('PLAY');
+				// console.log('PAUSED')
+			};
+
+			this.resumeVoice = function() {
+				this.voicePaused = false;
+				window.synth.resume();
+				// this.changeVoiceTitleButton('PAUSE');
+				// console.log('RESUMED')
+			};
+
+			this.setCurrentVoiceDecorator = function(event) {
+				window.player.setCurrentVoice(event.target.value);
+			};
+
+			this.changeVoiceKey = function(keyCode) {
+				// console.log(keyCode)
+				var totalVoices = this.voicesForCurrentLanguage.length;
+				// console.log(totalVoices)
+				if (totalVoices > 1) {
+					// console.log(this.voice)
+					// console.log('old', this.voice.number)
+					var value;
+					if (keyCode == 'BracketLeft') {
+						if (this.voice.number-1 >= 1) {
+							value = this.voice.number - 1;
+						} else {
+							value = totalVoices - 1;
+						};
+					} else {
+						if (this.voice.number+1 < totalVoices) {
+							value = this.voice.number + 1;
+						} else {
+							value = 0;
+						};
+					};
+					// console.log('new', value)
+					this.setCurrentVoice(value);
+					this.changeSelectedVoiceInDroplist();
+				};
+			};
+
+			this.setCurrentVoice = function(value) {
+				// console.log(this.voicesForCurrentLanguage[value])
+				this.voice = this.voicesForCurrentLanguage[value];
+				// this.utterance.voice = this.voice;
+				// console.log(this.voice);
+			};
+
+			this.changeLanguageDecorator = function(event) {
+				window.player.changeLanguage(event.target.value);
+			};
+
+			this.changeLanguageKey = function(keyCode) {
+				// var totalTexts = this.currentString.text.length;
+				// console.log(this.allPublishedLanguages);
+				var totalPublishedTextModes = this.allPublishedLanguages.length;
+				if (totalPublishedTextModes > 1) {
+					var lastTextMode = this.allPublishedLanguages[totalPublishedTextModes-1];
+					var currentTextModeIndex = this.allPublishedLanguages.indexOf(this.currentTextMode);
+					if (keyCode == 'ArrowDown') {
+						if (currentTextModeIndex < 1) {
+							this.currentTextMode = lastTextMode;
+						} else {
+							this.currentTextMode = this.allPublishedLanguages[currentTextModeIndex-1];
+						};
+					} else {
+						if (currentTextModeIndex == totalPublishedTextModes-1) {
+							this.currentTextMode = this.allPublishedLanguages[0];
+						} else {
+							this.currentTextMode = this.allPublishedLanguages[currentTextModeIndex+1];
+						};
+					};
+					// console.log('HERE 448', this.currentTextMode);
+					this.changeLanguage(this.currentTextMode);
+					this.changeSelectedTextModeInDroplist();
+				};
+			};
+
+			this.changeLanguage = function(value) {
+				// console.log(value);
+				this.blurLangaugeTextModeElement();
+				this.currentTextMode = Number(value);
+				this.completeText();
+				this.populateVoiceList();
+				this.changeSelectedVoiceInDroplist();
+			};
+
+			this.blurLangaugeTextModeElement = function() {
+				this.langaugeTextModeElement.blur();
+				// console.log("GAMARJOBA")
+				// this.currentStep.focus();
+			};
+
+			this.findHTMLElements = function() {
+				this.pictureElement = document.getElementById('picture');
+				this.textElement = document.getElementById('text');
+				this.previousButtonElement = document.getElementById('previous');
+				this.nextButtonElement = document.getElementById('next');
+				this.currentStep = document.getElementById('current_step');
+				this.totalStepsElement = document.getElementById('total_steps');
+				this.previousButtonElement.onclick = this.nextButtonElement.onclick = this.makeStepDecorator;
+				this.voiceSelectElement = document.getElementById('select-voice');
+				this.voiceSelectElement.onchange = this.setCurrentVoiceDecorator;
+				this.langaugeTextModeElement = document.getElementById('select-text-mode');
+				this.langaugeTextModeElement.onchange = this.changeLanguageDecorator;
+				this.voiceOneWordElement = document.getElementById('voice-one-word');
+				this.voiceOneWordElement.onclick = this.waitingOneWordDecorator;
+				this.pictureElement = document.getElementById('picture');
+				this.pictureElement.onclick = this.pauseOrResumeVoiceDecorator;
+				this.voiceRateElement = document.getElementById('voice-rate');
+				this.voiceRateElement.onchange = this.changeVoiceRateDecorator;
+				this.voiceVolumeElement = document.getElementById('voice-volume');
+				this.voiceVolumeElement.onchange = this.changeVoiceVolumeDecorator;
+				this.voicePitchElement = document.getElementById('voice-pitch');
+				this.voicePitchElement.onchange = this.changeVoicePitchDecorator;
+
+				document.addEventListener('keydown', function(event) {
+					// console.log(event.code)
+					// console.log('HERE1', window.player.currentTextMode)
+					switch (event.code) {
+						case 'ArrowLeft':
+							window.player.makeStep(window.player.previousButtonElement.id);
+							break;
+						case 'ArrowRight':
+						case 'Space':
+							window.player.makeStep(window.player.nextButtonElement.id);
+							break;
+						case 'ArrowDown':
+						case 'ArrowUp':
+							window.player.changeLanguageKey(event.code);
+							break;
+						case 'BracketLeft':
+						case 'BracketRight':
+							window.player.changeVoiceKey(event.code);
+							break;
+						case 'Enter':
+						case 'NumpadEnter':
+							window.player.pauseOrResumeVoice();
+							break;
+						};
+					// console.log('HERE2', window.player.currentTextMode)
+				});
+			};
+
+			// this.keyboardStep = function(targetElement) {
+			// 	var event = {'target': targetElement};
+			// 	this.makeStepDecorator(event);
+			// };
+
+			this.completePicture = function(string) {
+				// console.log(string)
+				if (string.picture) {
+					if (this.pictureElement.dataset.string != string.string) {
+						var url = 'pictures/' + string.picture;
+						this.pictureElement.src = url;
+						this.pictureElement.dataset.string = string.string;
+					};
+				} else {
+					var previousStringNumber = Number(string.string)-2;
+					var previousString = this.extractString(previousStringNumber);
+					// console.log(previousStringNumber)
+					// console.log(previousString)
+					this.completePicture(previousString);
+				};
+			};
+
+			this.createWordsElement = function(text) {
+				var sentenceElement = document.createElement('div');
+				sentenceElement.classList.add('sentence');
+				text.split(' ').forEach(function(eachWord) {
+					var word = document.createElement('span');
+					word.classList.add('word');
+					word.innerHTML = eachWord;
+					sentenceElement.appendChild(word);
+				});
+				return sentenceElement;
+			};
+
+			this.completeText = function() {
+				this.textElement.innerHTML = '';
+				this.currentText = this.currentString.text[this.currentTextMode];				
+				var text = this.currentText.text;
+
+				var textFragment = document.createDocumentFragment();
+				var textArray = text.split('\n');
+				for (var i=0;i<textArray.length;i++) {
+					var sentenceElement = this.createWordsElement(textArray[i]);
+					textFragment.appendChild(sentenceElement);
+				};
+				this.textElement.appendChild(textFragment);
+
+				// if (!(text.includes('\n'))) {
+				// 	this.textElement.innerHTML = text;
+				// } else {
+				// 	var textFragment = document.createDocumentFragment();
+				// 	text.split('\n').forEach(function(eachString) {
+				// 		var string = document.createElement('div');
+				// 		string.innerHTML = eachString;
+				// 		textFragment.appendChild(string);
+				// 	});
+				// 	this.textElement.appendChild(textFragment);
+				// };
+			};
+
+			this.extractString = function(stringNumber) {
+				return this.source[stringNumber];
+			};
+
+			this.setStepDecorator = function(event) {
+				window.player.requiredStepNumber = Number(event.target.value);
+				window.player.setStep();
+			};
+
+			this.setStep = function() {
+				console.log(this.requiredStepNumber, this.stepsTotal+1);
+				if (this.requiredStepNumber >= this.stepsTotal+1 || this.requiredStepNumber < 0 || this.requiredStepNumber == undefined) {
+					this.currentStringNumber = 0;
+				} else if (this.requiredStepNumber == 0 || this.requiredStepNumber > this.stepsTotal) {
+					this.currentStringNumber = this.stepsTotal - 1;
+				} else {
+					this.currentStringNumber = this.requiredStepNumber - 1;
+				};
+				this.completePlayer();
+			};
+
+			this.completeCounter = function() {
+				this.currentStep.value = this.currentStringNumber + 1;
+				// console.log(this.currentStep.value.length * 8 + 'px');
+				this.currentStep.style.width = String((this.currentStep.value.length + 3)* 10) + 'px';
+			};
+
+			this.completePlayer = function() {
+				this.textModes = this.defineTextModesForStep();
+				this.currentString = this.extractString(this.currentStringNumber);
+				this.setTextModeOptions();
+				this.completeCounter();
+				this.completePicture(this.currentString);
+				this.completeText();
+				this.refreshStringInURL();
+			};
+
+			this.changeSelectedTextModeInDroplist = function() {
+				// console.log('HERE 608');
+				var languageOptionsElements = this.langaugeTextModeElement.children;
+				for (var i=0;i<languageOptionsElements.length;i++) {
+					if (languageOptionsElements[i].value == this.currentTextMode) {
+						languageOptionsElements[i].selected = true;
+					};
+				};
+			};
+
+			this.changeSelectedVoiceInDroplist = function() {
+				var voiceOptionsElements = this.voiceSelectElement.children;
+				for (var i=0;i<voiceOptionsElements.length;i++) {
+					if (voiceOptionsElements[i].value == this.voice.number) {
+						voiceOptionsElements[i].selected = true;
+					};
+				};
+			};
+
+			this.setTextModeOptions = function() {
+				// console.log(this.currentTextMode)
+				this.cleanNodeContent(this.langaugeTextModeElement)
+				var optionsFragment = document.createDocumentFragment();
+				// console.log(this.textModes)
+				this.allPublishedLanguages = [];
+				var cancelCurrentTextMode = false;
+				for (var i=0;i<Object.keys(this.textModes).length;i++) {
+					// console.log(this.textModes[i])
+					if (this.textModes[i].published) {
+						this.allPublishedLanguages.push(i);
+						var option = document.createElement('option');
+						option.innerHTML = this.textModes[i].title;
+						option.setAttribute('value', i);
+						if (i == this.currentTextMode) {
+							option.selected = true;
+						};
+						optionsFragment.appendChild(option);
+					} else if (i == this.currentTextMode) {
+						cancelCurrentTextMode = true;
+					};
+				};
+				if (cancelCurrentTextMode) {
+					this.currentTextMode = this.allPublishedLanguages[0];
+					this.completeText();
+					this.populateVoiceList();
+					// console.log(this.currentTextMode);
+				};
+				this.langaugeTextModeElement.appendChild(optionsFragment);
+			};
+
+			this.defineStartPage = function() {
+				var paramsString = window.location.search;
+				this.searchParams = new URLSearchParams(paramsString);
+				var stringNumber = Number(this.searchParams.get("string"));
+				if (stringNumber) {
+					this.requiredStepNumber = stringNumber;
+				};
+			};
+
+			this.refreshStringInURL = function() {
+				this.searchParams.set("string", this.currentStringNumber+1);
+				history.pushState(null, null, "?" + this.searchParams.toString());
+			};
+
+			this.changeVoiceRateDecorator = function(event) {
+				window.player.changeVoiceRate(Number(event.target.value));
+			};
+
+			this.changeVoiceRate = function(value) {
+				this.utterance.rate = value;
+			};
+
+			this.changeVoiceVolumeDecorator = function(event) {
+				window.player.changeVoiceVolume(Number(event.target.value));
+			};
+
+			this.changeVoiceVolume = function(value) {
+				this.utterance.volume = value;
+			};
+
+			this.changeVoicePitchDecorator = function(event) {
+				window.player.changeVoicePitch(Number(event.target.value));	
+			};
+
+			this.changeVoicePitch = function(value) {
+				this.utterance.pitch = value;
+			};
+
+			this.isWord = function(element) {
+				if (element.classList.contains('word')) {
+					return true;
+				} else {
+					return false;
+				}
+			};
+
+			this.stressWordDecorator = function(event) {
+				if (window.player.isWord(event.target)) {
+					event.target.classList.add('stressed', 'button');
+				};
+			};
+
+			this.unstressWordDecorator = function(event) {
+				event.target.classList.remove('stressed', 'button');
+			};
+
+			this.sayOneWordDecorator = function(event) {
+				window.player.playVoice(event.target.innerHTML);
+			};
+
+			this.waitingOneWord = function() {
+				this.textElement.onmouseover = this.stressWordDecorator;
+				this.textElement.onmouseout = this.unstressWordDecorator;
+				this.textElement.onclick = this.sayOneWordDecorator;				
+			};
+
+			this.stopWaintingOneWord = function() {
+				this.textElement.onmouseover = this.textElement.onmouseout = this.textElement.onclick = null;
+			};
+
+			this.stopWaitingOneWordDecorator = function(event) {
+				event.target.classList.remove('one-word-mode-activated');
+				event.target.onclick = window.player.waitingOneWordDecorator;
+				window.player.stopWaintingOneWord();
+			};
+
+			this.waitingOneWordDecorator = function(event) {
+				event.target.classList.add('one-word-mode-activated');
+				event.target.onclick = window.player.stopWaitingOneWordDecorator;
+				window.player.waitingOneWord();
+			};
+	
+			this.voices = window.synth.getVoices();
+			// console.log(this.voices);
+			this.languagesForSpeach = {'en': 'en-GB', 'ru': 'ru-RU'};
+			this.source = source;
+			this.defineStartPage();
+			this.currentStringNumber = 0;
+			this.stepsTotal = source.length;
+			// this.textModes = this.defineTextModes();
+			this.currentTextMode = 0;
+			this.findHTMLElements();
+			this.totalStepsElement.innerHTML = this.stepsTotal;
+			this.currentStep.onchange = this.setStepDecorator;
+			this.setStep();
+			// this.completePlayer();
+			this.populateVoiceList();
+			// this.setTextModeOptions();
+			this.createUtterance();
+			this.voicePaused = false;
+
+			// if (window.synth.onvoiceschanged !== undefined) {
+			// 	console.log('here')
+			// 	window.synth.onvoiceschanged = this.populateVoiceListDecorator;
+			// };
+		};
+
+		function downloadJson(requestPath, callFunction) {
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', 'data/' + requestPath);	
+			xhr.onload = function(evt) {
+				var rawData = evt.target.response;
+				var jsonData = JSON.parse(rawData);
+				callFunction(jsonData);
+			};
+			xhr.send();
+		};
+
+		function dowloadSourceCallback(jsonData) {
+			window.player = new Player(jsonData);
+		};
+	</script>
+</body>

@@ -1,0 +1,651 @@
+﻿[
+	{"string": "1",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "Sailors tell a story about a big, black pirate ship.",
+			"published": true},
+			{"title": "Original English",
+			"language": "en",
+			"text": "Sailors tell a story about a big, black pirate ship.",
+			"published": false},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Моряки рассказывают историю о большом черном пиратском корабле.",
+			"published": true}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000006360.gif"
+},
+	{"string": "2",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "They see it sometimes when the fog is thick."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "They see it sometimes when the fog is thick."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Они видят его иногда, когда туман густой."}
+		],
+	"picture": ""
+	},
+	{"string": "3",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "The ghostly pirates on the black ship can never leave it because the ship carries a curse."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "The ghostly pirates on the black ship can never leave it because the ship carries a curse."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Призрачные пираты на черном корабле никогда не могут покинуть его, потому что корабль несет проклятие."}
+		],
+	"picture": ""
+	},
+	{"string": "4",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "But this is only a story. There aren't really any ghosts. Or are there?"},
+			{"title": "Original English",
+			"language": "en",
+			"text": "But this is only a story. There aren't really any ghosts. Or are there?"},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Но это всего только история. Нет призраков на самом деле. Или есть?"}
+		],
+	"picture": "Pirates_of_The_Caribbean_Curse_of_The_Black_Pearl_BDRip_720p.mkv_snapshot_00.00.09.jpg"
+	},
+	{"string": "5",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "The Dauntless sailed slowly through the thick fog."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "The Dauntless sailed slowly through the thick fog."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Неустрашимый» плыл медленно через густой туман."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000027560.gif"
+	},
+	{"string": "6",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "It was a big ship, and it carried fifty guns and a hundred strong men."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "It was a big ship, and it carried fifty guns and a hundred strong men."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Это был большой корабль, и он перевозил пятьдесят пушек и сотню сильных мужчин."}
+		],
+	"picture": ""
+	},
+	{"string": "7",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "Twelve-year-old Elizabeth Swann stood at the front of the ship."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "Twelve-year-old Elizabeth Swann stood at the front of the ship."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Двенадцатилетняя Элизабет Суон стояла в передней части корабля."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000035440.jpg"
+	},
+	{"string": "8",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "She was on her way to Port Royal in Jamaica."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "She was on her way to Port Royal in Jamaica."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Она была на пути в Порт-Ройал на острове Ямайка."}
+		],
+	"picture": ""
+	},
+	{"string": "9",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "Her father was the new governor there."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "Her father was the new governor there."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Её отец являлся новым губернатором там."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000047680.jpg"
+	},
+	{"string": "10",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"I'd like to meet a pirate,\" she thought."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"I'd like to meet a pirate,\" she thought."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Я бы хотела встретить пирата» - подумала она."}
+		],
+	"picture": ""
+	},
+	{"string": "11",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "She remembered an old song:\n\"Yo ho, уо ho, a pirate's life for me,\nYo ho, yo ho, a pirate's life ...\""},
+			{"title": "Original English",
+			"language": "en",
+			"text": "She remembered an old song:\n\"Yo ho, уо ho, a pirate's life for me,\nYo ho, yo ho, a pirate's life ...\""},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Она вспомнила старую песню:\n«Йоу хоу, Йоу хоу, жизнь пирата для меня!\nЙоу хоу, Йоу хоу, жизнь пирата…»"}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000048800.jpg"
+	},
+	{"string": "12",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "Suddenly, a sailor called to her."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "Suddenly, a sailor called to her."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Внезапно моряк позвал её."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000054920.jpg"
+	},
+	{"string": "13",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"Quiet, Miss!\" he said. \"Pirates sail this ocean. You don't want to call them to us.\""},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"Quiet, Miss!\" he said. \"Pirates sail this ocean. You don't want to call them to us.\""},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Тише, Мисс!» - он сказал. «Пираты плавают в этом океане. Ты не хочешь позвать их к нам?»"}
+		],
+	"picture": ""
+	},
+	{"string": "14",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"Mr. Gibbs!\" Captain Norrington shouted at the old sailor.\n\"Don't be afraid,\" he said to Elizabeth, \"There aren't any pirates here today.\""},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"Mr. Gibbs!\" Captain Norrington shouted at the old sailor.\n\"Don't be afraid,\" he said to Elizabeth, \"There aren't any pirates here today.\""},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Мистер Гибс!» - капитан Норрингтон закричал на старого моряка.\n«Не бойся,» - он сказал Елизабет. - «Здесь нет ни одного пирата сегодня»"}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000060600.jpg"
+	},
+	{"string": "15",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"I'm not afraid,\" said Elizabeth.\nBut she knew the stories about pirates and fog."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"I'm not afraid,\" said Elizabeth.\nBut she knew the stories about pirates and fog."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Я не напугана» - сказала Элизабет.\nНо она знала истории о пиратах и тумане."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000088240.jpg"
+	},
+	{"string": "16",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "They looked down at the dark water. There was something there. What was it? Wood? A box?"},
+			{"title": "Original English",
+			"language": "en",
+			"text": "They looked down at the dark water. There was something there. What was it? Wood? A box?"},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Они выглянули вниз в темную воду. Там было что-то. Что это было? Дерево? Коробка?"}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000136120.jpg"
+	},
+	{"string": "17",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"Look!\" Elizabeth shouted to the captain.\n\"It's a man!\" said Captain Norrington."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "They looked down at the dark water. There was something there. What was it? Wood? A box?"},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Смотрите!» - Элизабет прокричала капитану.\n«Это человек» - сказал капитан."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000142040.jpg"
+	},
+	{"string": "18",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"No, it's not,\" said Elizabeth, \"It's a boy. Quickly, quickly, help him! Somebody help him!\""},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"No, it's not,\" said Elizabeth, \"It's a boy. Quickly, quickly, help him! Somebody help him!\""},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Нет, не так,» - сказала Элизабет – «Это мальчик. Быстро, быстро помогите ему! Кто-нибудь помогите!»"}
+		],
+	"picture": ""
+	},
+	{"string": "19",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "Captain Norrington called to his men.\n\"Get him out!\""},
+			{"title": "Original English",
+			"language": "en",
+			"text": "Captain Norrington called to his men.\n\"Get him out!\""},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Капитан Норрингтон призвал своих людей.\n«Вытащите его!»"}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000145520.jpg"
+	},
+	{"string": "20",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "The men pulled the boy onto the Dauntless."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "The men pulled the boy onto the Dauntless."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Люди вытянули мальчика на борт «Неустрашимого»."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000147440.jpg"
+	},
+	{"string": "21",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"Is he OK?\" asked Elizabeth."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"Is he OK?\" asked Elizabeth."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Он в порядке?» - спросила Элизабет."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000156360.jpg"
+	},
+	{"string": "22",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"Oh, yes, Miss,\" said one of the sailors. \"He's fine.\""},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"Oh, yes, Miss,\" said one of the sailors. \"He's fine.\""},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«О, да, Мисс» - сказал один из моряков – «С ним всё в порядке»."}
+		],
+	"picture": ""
+	},
+	{"string": "23",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"But where did he come from?\" asked Elizabeth. \"There's nothing out there. Only the ocean.\""},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"But where did he come from?\" asked Elizabeth. \"There's nothing out there. Only the ocean.\""},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Но откуда он прибыл?» - спросила Элизабет. – «Нет ничего там за бортом. Только океан»"}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000165120.jpg"
+	},
+	{"string": "24",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "Nobody spoke. And then a big ship came out of the fog. Every man on it was dead."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "Nobody spoke. And then a big ship came out of the fog. Every man on it was dead."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Никто не говорил. И тогда большой корабль вышел из тумана. Каждый человек на нем был мертв."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000177520.gif"
+	},
+	{"string": "25",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "The men ran to the side of the Dauntless and looked down at the water. Were there any more people there?"},
+			{"title": "Original English",
+			"language": "en",
+			"text": "The men ran to the side of the Dauntless and looked down at the water. Were there any more people there?"},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Люди побежали на один борт «Неустрашимого» и посмотрели вниз на воду. Были ещё люди там?"}
+		],
+	"picture": ""
+	},
+	{"string": "26",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"Miss, you stay with the boy,\" the captain said to Elizabeth."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"Miss, you stay with the boy,\" the captain said to Elizabeth."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Мисс, вы остаётесь с мальчиком»  - капитан сказал Элизабет."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000201760.jpg"
+	},
+	{"string": "27",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "Elizabeth sat down next to the boy. He was about the same age as her—ten or maybe eleven."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "Elizabeth sat down next to the boy. He was about the same age as her—ten or maybe eleven."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Элизабет села рядом с мальчиком. Он был примерно такого же возраста, как и она, десять или, может быть, одиннадцать."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000221640.jpg"
+	},
+	{"string": "28",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"Slowly, his eyes opened.\n\"Hello,\" said Elizabeth. \"My name is Elizabeth Swann.\""},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"Slowly, his eyes opened.\n\"Hello,\" said Elizabeth. \"My name is Elizabeth Swann.\""},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Медленно его глаза открылись.\n«Привет», - сказала Элизабет. – «Моё имя – Элизабет Суон»"}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000228720.jpg"
+	},
+	{"string": "29",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"I'm Will. Will Turner.\"\nAnd then he was asleep again."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"I'm Will. Will Turner.\"\nAnd then he was asleep again."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Я – Уил. Уил Тернер»\nИ затем он заснул опять."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000228720.jpg"
+	},
+	{"string": "30",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "Elizabeth watched him. Then she saw something inside his shirt. Something gold."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "Elizabeth watched him. Then she saw something inside his shirt. Something gold."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Элизабет наблюдала за ним. Тогда она увидела что-то внутри его рубашки. Что-то золотое."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000240360.jpg"
+	},
+	{"string": "31",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "Slowly, she took it from him. She looked at it carefully."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "Slowly, she took it from him. She looked at it carefully."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Медленно, она взяла это он него. Она взглянула на это внимательно."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000244600.jpg"
+	},
+	{"string": "32",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "It was a medallion and there, on the front, was a skull and crossbones!"},
+			{"title": "Original English",
+			"language": "en",
+			"text": "It was a medallion and there, on the front, was a skull and crossbones!"},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Это был медальон и там, на передней части, был череп и скрещенные кости."}
+		],
+	"picture": ""
+	},
+	{"string": "33",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"Oh!\" she thought. \"Will Turner, you're ... a pirate!\""},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"Oh!\" she thought. \"Will Turner, you're ... a pirate!\""},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«О!» - она подумала. – «Уил Тернер, ты – пират!»"}
+		],
+	"picture": ""
+	},
+	{"string": "34",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "When Captain Norrington came back, she quickly put the medallion under her dress."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "When Captain Norrington came back, she quickly put the medallion under her dress."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Когда капитан Нортон вернулся назад, она быстро положила медальон под своё платье."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000250560.jpg"
+	},
+	{"string": "35",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "\"Did he speak?\" he asked.\n\"His name is Will Turner,\" she answered."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "\"Did he speak?\" he asked.\n\"His name is Will Turner,\" she answered."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "«Он говорил?» - он спросил.\n«Его имя – Уил Тернер» - она ответила."}
+		],
+	"picture": ""
+	},
+	{"string": "36",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "Inside her dress, she felt the gold medallion."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "Inside her dress, she felt the gold medallion."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Внутри её платья, она почувствовала золотой медальон."}
+		],
+	"picture": ""
+	},
+	{"string": "37",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "She looked out at the ocean—and there, in front of her, was a big, black ship.\nAnd it had the skull and crossbones, too!"},
+			{"title": "Original English",
+			"language": "en",
+			"text": "She looked out at the ocean—and there, in front of her, was a big, black ship.\nAnd it had the skull and crossbones, too!"},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Она выглянула на океан, и там, впереди её, был большой, черный корабль.\nИ он имел череп и скрещенные кости тоже!"}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000278560.jpg"
+	},
+	{"string": "38",
+	"chapter" : "1",
+	"student": "1",
+	"text":
+		[
+			{"title": "Translated English",
+			"language": "en",
+			"text": "The black ship turned away. But Elizabeth was suddenly very afraid."},
+			{"title": "Original English",
+			"language": "en",
+			"text": "The black ship turned away. But Elizabeth was suddenly very afraid."},
+			{"title": "Русский",
+			"language": "ru",
+			"text": "Черный корабль свернул. Но Элизабета был внезапно очень напугана."}
+		],
+	"picture": "Pirates_of_The_Caribbean_5.1.mp4_000279680.jpg"
+	}
+]
